@@ -106,10 +106,10 @@ export default function AuthPage({ setUser }) {
           </p>
           <div className="center">
             <ul className="bulleted-list">
-              <li><span className="letters">Y</span>our health journey starts (or restarts) now</li>
-              <li><span className="letters">O</span>pen yourself to holistic health and longevity </li>
-              <li><span className="letters">G</span>ain control over stress, stiffness, sleep, etc.</li>
-              <li><span className="letters">A</span>spire to a life of balance and alignment</li>
+              <li><span className="letters">Y</span>our health journey starts now</li>
+              <li><span className="letters">O</span>pen yourself to holistic health</li>
+              <li><span className="letters">G</span>ain control of your mind and body</li>
+              <li><span className="letters">A</span>spire to a life of balance</li>
             </ul>
           </div>
       </div>
