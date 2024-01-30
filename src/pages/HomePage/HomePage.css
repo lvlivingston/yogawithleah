@@ -66,6 +66,7 @@
     font-size: 30px;
     color: white;
     letter-spacing: 1px;
+    padding: 0px 20px 0px 20px;
     font-weight: bold;
 }
 
@@ -74,7 +75,7 @@
     display: block;
     color: white;
     font-size: 18px;
-    padding: 0px 50px 20px 50px;
+    padding: 10px 20px 0px 20px;
     margin-bottom: 10px;
     text-align: justify; 
 }
@@ -101,7 +102,7 @@
 
 .footer {
     background-color: #b5a391;
-    padding: 15px 0px 15px 0px;
+    padding: 20px 0px 15px 0px;
 }
 
 .footertext-white {
@@ -129,7 +130,7 @@
     font-family: 'Inter', sans-serif;
     color: white;
     font-size: 16px;
-    padding: 0px 50px 20px 50px;
+    padding: 10px 20px 20px 20px;
     margin-left: 20px;
     margin-bottom: 10px;
 }
