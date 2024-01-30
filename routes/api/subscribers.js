@@ -1,10 +1,18 @@
 const express = require('express');
 const router = express.Router();
-const subscribersCtrl = require('../../controllers/api/subscriber');
+const Subscriber = require('../../models/subscriber');
 
-// All paths start with '/api/subscribe'
-
-// POST /api/subscribe (create a subscriber - newsletter signup)
-router.post('/', subscribersCtrl.create);
+// Handle POST request to /subscribers
+router.post('/', async (req, res) => {
+  try {
+    const { email } = req.body;
+    // Your logic to save the email to the database (e.g., MongoDB)
+    const subscriber = await Subscriber.create({ email });
+    res.status(201).json(subscriber); // Send a success response
+  } catch (error) {
+    console.error('Error:', error);
+    res.status(500).json({ error: 'Internal server error' }); // Send an error response
+  }
+});
 
 module.exports = router;

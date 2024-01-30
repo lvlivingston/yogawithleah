@@ -25,7 +25,7 @@ export default function AuthPage({ setUser }) {
   const handleSubmit = async (event) => {
     event.preventDefault();
     try {
-      const response = await fetch('/subscribe', {
+      const response = await fetch('/subscribers', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -128,7 +128,7 @@ export default function AuthPage({ setUser }) {
             <h2 className="headline-brown">
               Sign-Up for Email Updates
             </h2>
-            <form action="/subscribe" method="post" onSubmit={handleSubmit} className="input">
+            <form action="/subscribers" method="post" onSubmit={handleSubmit} className="input">
               <label htmlFor="email" className="text-brown">
                 See the live class schedule for the upcoming month and get notified of new videos and events!
               </label>
