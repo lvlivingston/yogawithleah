@@ -8,7 +8,7 @@ import linkedInIcon from '../../images/linkedin.png';
 import gitHubIcon from '../../images/github.png';
 import './HomePage.css';
 
-export default function AuthPage({ setUser }) {
+export default function HomePage({ setUser }) {
   const [email, setEmail] = useState('');
   const [submitted, setSubmitted] = useState(false);
   const youTubeUrl = 'https://www.youtube.com/@yogawithleah';
