@@ -8,7 +8,12 @@ require('./config/database');
 
 const app = express();
 
-app.use(cors());
+app.use(cors({
+    origin: ['https://lvlivingston.com', 'https://www.lvlivingston.com', 'https://yogawithleah.com', 'https://www.yogawithleah.com'],
+    methods: ['GET', 'POST', 'PUT', 'DELETE'], // or the methods you're using
+    allowedHeaders: ['Content-Type', 'Authorization'] // or the headers you're using
+}));
+
 app.use(express.json());
 
 // Configure both serve-favicon & static middleware
