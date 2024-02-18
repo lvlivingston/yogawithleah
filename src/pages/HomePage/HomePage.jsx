@@ -4,6 +4,7 @@ import youTubeIcon from '../../images/youtube.png';
 import googleIcon from '../../images/google.png';
 import instagramIcon from '../../images/instagram.png';
 import whatsAppIcon from '../../images/whatsapp.png';
+import spotifyIcon from '../../images/spotify.png';
 import linkedInIcon from '../../images/linkedin.png';
 import gitHubIcon from '../../images/github.png';
 import './HomePage.css';
@@ -15,6 +16,7 @@ export default function HomePage({ setUser }) {
   const googleUrl = 'https://calendar.google.com/calendar/u/2?cid=c2VuZG1leW9nYXN0dWZmQGdtYWlsLmNvbQ';
   const instagramUrl = 'https://www.instagram.com/lvlivingston/';
   const whatsAppUrl = 'https://chat.whatsapp.com/BoMhhPeOqgL2MLiEFJ9REM';
+  const spotifyUrl = 'https://open.spotify.com/user/1180246227?si=WvPRuD3-T5mi4wO697WSRg';
   const linkedInUrl = 'https://www.linkedin.com/in/livingstonleah/';
   const gitHubUrl = 'https://github.com/lvlivingston';
   
@@ -87,6 +89,9 @@ export default function HomePage({ setUser }) {
           </a>&nbsp;&nbsp;
           <a href={whatsAppUrl} target="_blank" rel="noopener noreferrer">
             <img src={whatsAppIcon} alt="WhatsApp" className="icon" />
+          </a>&nbsp;&nbsp;
+          <a href={spotifyUrl} target="_blank" rel="noopener noreferrer">
+            <img src={spotifyIcon} alt="Spotify" className="icon" />
           </a>&nbsp;&nbsp;
           <a href={linkedInUrl} target="_blank" rel="noopener noreferrer">
             <img src={linkedInIcon} alt="LinkedIn" className="icon" />
