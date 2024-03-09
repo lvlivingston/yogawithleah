@@ -1,6 +1,6 @@
 const express = require('express');
 const router = express.Router();
-const Subscriber = require('../../models/subscriber');
+// const Subscriber = require('../../models/subscriber');
 const { create } = require('../../controllers/api/subscribers');
 
 // Handle POST request to /subscribers using the create function from the controller
