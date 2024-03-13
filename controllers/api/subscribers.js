@@ -8,6 +8,7 @@ async function create(req, res) {
   try {
       const { email } = req.body;
       const existingSubscriber = await Subscriber.findOne({ email });
+      console.log("this was hit");
       if (existingSubscriber) {
           return res.status(409).json({ error: 'Your email is already on the list.' });
       }
