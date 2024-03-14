@@ -9,8 +9,17 @@ require('./config/database');
 const app = express();
 
 app.use(cors({
-    origin: ['localhost:3000', 'https://lvlivingston.com', 'https://www.lvlivingston.com', 
-    'https://yogawithleah.com', 'https://www.yogawithleah.com', 'https://yogawithleah-leahs-projects-b3161619.vercel.app/', 'https://yogawithleah.vercel.app/']
+    origin: function(origin, callback) {
+        // Allow requests with no origin (like mobile apps or curl requests)
+        if (!origin) return callback(null, true);
+        // Check if the request origin is in the list of allowed origins
+        const allowedOrigins = ['localhost:3000', 'https://lvlivingston.com', 'lvlivingston.com', 'https://www.lvlivingston.com', 'https://yogawithleah.com', 'https://www.yogawithleah.com', 'https://yogawithleah-leahs-projects-b3161619.vercel.app/', 'https://yogawithleah.vercel.app/'];
+        if (allowedOrigins.includes(origin) || origin.startsWith('http://localhost')) {
+            callback(null, true); // Allow the request
+        } else {
+            callback(new Error('Not allowed by CORS')); // Reject the request
+        }
+    },
     methods: ['GET', 'POST', 'PUT', 'DELETE'], // or the methods you're using
     // allowedHeaders: ['Content-Type', 'Authorization'] // or the headers you're using
     maxAgeSeconds: 3600,
