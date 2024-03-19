@@ -30,7 +30,7 @@ export default function HomePage({ setUser }) {
     event.preventDefault();
     console.log('Hit prevent default function');
     try {
-      const response = await fetch('yogawithleah.vercel.app/routes/api/subscribers', {
+      const response = await fetch('/routes/api/subscribers', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
