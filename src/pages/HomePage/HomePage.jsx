@@ -22,10 +22,13 @@ export default function HomePage({ setUser }) {
   
   const handleEmailChange = (event) => { 
     setEmail(event.target.value);
+    console.log('Successfully changed the email');
   };
 
   const handleSubmit = async (event) => {
+    console.log('Start of handleSubmit function');
     event.preventDefault();
+    console.log('Hit prevent default function');
     try {
       const response = await fetch('/subscribers', {
         method: 'POST',
@@ -36,11 +39,12 @@ export default function HomePage({ setUser }) {
       });
       if (response.ok) {
         setSubmitted(true);
+        console.log('Fetched subscribers url and submitted the email');
       } else {
-        console.error('Subscription failed');
+        console.error('Unsuscessful attempt. Try to add your email another time.');
       }
     } catch (error) {
-      console.error('Error:', error);
+      console.error('Error 500: the function did nothing.', error);
     }
   };
 
@@ -50,6 +54,7 @@ export default function HomePage({ setUser }) {
     const isValidEmail = /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(emailInput.value);
     getScheduleButton.disabled = !isValidEmail;
   }, []);
+  console.log('Confirmed the email format');
 
   useEffect(() => {
     const emailInput = document.getElementById('email');

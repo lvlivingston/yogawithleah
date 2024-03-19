@@ -5,8 +5,10 @@ module.exports = {
 };
   
 async function create(req, res) {
+    console.log("here's the start of the create function");
   try {
       const { email } = req.body;
+      console.log("you created an email");
       const existingSubscriber = await Subscriber.findOne({ email });
       console.log("this was hit");
       if (existingSubscriber) {
