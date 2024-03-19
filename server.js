@@ -15,7 +15,7 @@ app.use(cors({
         // Check if the request origin is in the list of allowed origins
         const allowedOrigins = ['localhost:3000', 'https://lvlivingston.com', 'https://www.lvlivingston.com', 
         'https://yogawithleah.com', 'https://www.yogawithleah.com', 'https://yogawithleah.vercel.app/', 
-        'https://yogawithleah-git-main-leahs-projects-b3161619.vercel.app/'];
+        'https://yogawithleah-git-main-leahs-projects-b3161619.vercel.app/', 'https://yogawithleah.vercel.app/routes/api/subscribers', 'https://www.yogawithleah.vercel.app/routes/api/subscribers'];
         if (allowedOrigins.includes(origin) || origin.startsWith('http://localhost')) {
             callback(null, true); // Allow the request
         } else {

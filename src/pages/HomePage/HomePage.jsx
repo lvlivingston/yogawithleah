@@ -41,7 +41,7 @@ export default function HomePage({ setUser }) {
         setSubmitted(true);
         console.log('Fetched subscribers url and submitted the email');
       } else {
-        console.error('Unsuscessful attempt. Try to add your email another time.');
+        console.error('Unsuccessful attempt. Try to add your email another time.');
       }
     } catch (error) {
       console.error('Error 500: the function did nothing.', error);
