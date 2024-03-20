@@ -30,13 +30,20 @@ export default function HomePage({ setUser }) {
     event.preventDefault();
     console.log('Hit prevent default function');
     try {
-      const response = await fetch('/routes/api/subscribers', {
+      const response = await fetch('https://yogawithleah.vercel.app/subscribers', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
         },
         body: JSON.stringify({ email }),
       });
+      // const response = await fetch('/routes/api/subscribers', {
+      //   method: 'POST',
+      //   headers: {
+      //     'Content-Type': 'application/json',
+      //   },
+      //   body: JSON.stringify({ email }),
+      // });
       if (response.ok) {
         setSubmitted(true);
         console.log('Fetched subscribers url and submitted the email');
