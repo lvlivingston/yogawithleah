@@ -102,7 +102,7 @@
     color: white; /* Set button text color */
     text-decoration: none; /* Remove underline */
     border: none; /* Remove border */
-    border-radius: 5px; /* Add border radius for rounded corners */
+    border-radius: 10px; /* Add border radius for rounded corners */
     font-family: 'Inter', sans-serif; /* Specify font family */
     font-size: 16px; /* Adjust font size as needed */
     cursor: pointer; /* Change cursor to pointer on hover */

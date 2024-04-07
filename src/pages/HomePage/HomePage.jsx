@@ -121,8 +121,8 @@ export default function HomePage({ setUser }) {
             Private Lessons Available Upon Request
           </h2>
           <p className="text-white">
-            Trained in the birthplace of yoga, Leah received her formal training in Rishikesh, India. 
-            She's a 200hr RYT and Yoga Alliance member specialized in Ashtanga, Hatha, and therapeudic practices. 
+            Trained in the birthplace of yoga, Leah received her formal education in Rishikesh, India. 
+            She's a 200hr RYT and Yoga Alliance member specialized in Ashtanga, Hatha, and Nidra (restorative and therapeudic) practices. 
           </p>
           <div className="center">
             <ul className="bulleted-list">
