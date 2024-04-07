@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useCallback } from 'react';
+// import React, { useState, useEffect, useCallback } from 'react';
 import backgroundImage from '../../images/new-ocean.png';
 import youTubeIcon from '../../images/youtube.png';
 import googleIcon from '../../images/google.png';
@@ -7,11 +7,12 @@ import whatsAppIcon from '../../images/whatsapp.png';
 import spotifyIcon from '../../images/spotify.png';
 import linkedInIcon from '../../images/linkedin.png';
 import gitHubIcon from '../../images/github.png';
+import retreatIcon from '../../images/HYP2024.png';
 import './HomePage.css';
 
 export default function HomePage({ setUser }) {
-  const [email, setEmail] = useState('');
-  const [submitted, setSubmitted] = useState(false);
+  // const [email, setEmail] = useState('');
+  // const [submitted, setSubmitted] = useState(false);
   const youTubeUrl = 'https://www.youtube.com/@yogawithleah';
   const googleUrl = 'https://calendar.google.com/calendar/u/2?cid=c2VuZG1leW9nYXN0dWZmQGdtYWlsLmNvbQ';
   const instagramUrl = 'https://www.instagram.com/lvlivingston/';
@@ -19,58 +20,59 @@ export default function HomePage({ setUser }) {
   const spotifyUrl = 'https://open.spotify.com/user/1180246227?si=WvPRuD3-T5mi4wO697WSRg';
   const linkedInUrl = 'https://www.linkedin.com/in/livingstonleah/';
   const gitHubUrl = 'https://github.com/lvlivingston';
+  const retreatUrl = 'https://drive.google.com/file/d/1P89qxbloBbgtuMfCZZjLDyy7PFOpwrQw/view'
   
-  const handleEmailChange = (event) => { 
-    setEmail(event.target.value);
-    console.log('Successfully changed the email');
-  };
+  // const handleEmailChange = (event) => { 
+  //   setEmail(event.target.value);
+  //   console.log('Successfully changed the email');
+  // };
 
-  const handleSubmit = async (event) => {
-    console.log('Start of handleSubmit function');
-    event.preventDefault();
-    console.log('Hit prevent default function');
-    try {
-      const response = await fetch('https://yogawithleah.vercel.app/subscribers', {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-        },
-        body: JSON.stringify({ email }),
-      });
-      // const response = await fetch('/routes/api/subscribers', {
-      //   method: 'POST',
-      //   headers: {
-      //     'Content-Type': 'application/json',
-      //   },
-      //   body: JSON.stringify({ email }),
-      // });
-      if (response.ok) {
-        setSubmitted(true);
-        console.log('Fetched subscribers url and submitted the email');
-      } else {
-        console.error('Unsuccessful attempt. Try to add your email another time.');
-        console.log(response);
-      }
-    } catch (error) {
-      console.error('Error 500: the function did nothing.', error);
-    }
-  };
+  // const handleSubmit = async (event) => {
+  //   console.log('Start of handleSubmit function');
+  //   event.preventDefault();
+  //   console.log('Hit prevent default function');
+  //   try {
+  //     const response = await fetch('https://yogawithleah.vercel.app/subscribers', {
+  //       methods: 'POST',
+  //       headers: {
+  //           'Content-Type': 'application/json',
+  //       },
+  //       body: JSON.stringify({ email }),
+  //     });
+  //     // const response = await fetch('/routes/api/subscribers', {
+  //     //   method: 'POST',
+  //     //   headers: {
+  //     //     'Content-Type': 'application/json',
+  //     //   },
+  //     //   body: JSON.stringify({ email }),
+  //     // });
+  //     if (response.ok) {
+  //       setSubmitted(true);
+  //       console.log('Fetched subscribers url and submitted the email');
+  //     } else {
+  //       console.error('Unsuccessful attempt. Try to add your email another time.');
+  //       console.log(response);
+  //     }
+  //   } catch (error) {
+  //     console.error('Error 500: the function did nothing.', error);
+  //   }
+  // };
 
-  const handleEmailInput = useCallback(() => {
-    const getScheduleButton = document.getElementById('getSchedule');
-    const emailInput = document.getElementById('email');
-    const isValidEmail = /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(emailInput.value);
-    getScheduleButton.disabled = !isValidEmail;
-  }, []);
-  console.log('Confirmed the email format');
+  // const handleEmailInput = useCallback(() => {
+  //   const getScheduleButton = document.getElementById('getSchedule');
+  //   const emailInput = document.getElementById('email');
+  //   const isValidEmail = /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(emailInput.value);
+  //   getScheduleButton.disabled = !isValidEmail;
+  // }, []);
+  // console.log('Confirmed the email format');
 
-  useEffect(() => {
-    const emailInput = document.getElementById('email');
-    emailInput.addEventListener('input', handleEmailInput);
-    return () => {
-      emailInput.removeEventListener('input', handleEmailInput);
-    };
-  }, [handleEmailInput]);
+  // useEffect(() => {
+  //   const emailInput = document.getElementById('email');
+  //   emailInput.addEventListener('input', handleEmailInput);
+  //   return () => {
+  //     emailInput.removeEventListener('input', handleEmailInput);
+  //   };
+  // }, [handleEmailInput]);
 
   return (
     <main>
@@ -131,7 +133,22 @@ export default function HomePage({ setUser }) {
             </ul>
           </div>
       </div>
-      <div className="social">
+      <div className="retreat">
+        <div className="retreat-image-container">
+          <a href={retreatUrl} target="_blank" rel="noopener noreferrer">
+            <img src={retreatIcon} alt="Retreat" className="retreat-icon" />
+          </a>
+        </div>
+        <div className="text-container">
+            <h2 className="headline-brown">
+              Treat yourself this Summer!
+            </h2>
+            <div className="retreat-text">
+              <a href={retreatUrl} target="_blank" rel="noopener noreferrer" className="details-button">Click here for details!</a>
+            </div>
+        </div>
+      </div>
+      {/* <div className="social">
         {submitted ? (
           <>
             <h2 className="headline-brown">
@@ -166,7 +183,7 @@ export default function HomePage({ setUser }) {
             </form>
           </>
         )}
-      </div>
+      </div> */}
       <div className="footer">
         <h2 className="footertext-white">+1 (970) 389-6833</h2>
         <h2 className="footertext-white">sendmeyogastuff@gmail.com</h2>
