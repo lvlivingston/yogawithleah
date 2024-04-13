@@ -5,6 +5,7 @@ import googleIcon from '../../images/google.png';
 import instagramIcon from '../../images/instagram.png';
 import whatsAppIcon from '../../images/whatsapp.png';
 import spotifyIcon from '../../images/spotify.png';
+import yogaAllianceIcon from '../../images/yogaalliance.png';
 import linkedInIcon from '../../images/linkedin.png';
 import gitHubIcon from '../../images/github.png';
 import retreatIcon from '../../images/HYP2024.png';
@@ -18,6 +19,7 @@ export default function HomePage({ setUser }) {
   const instagramUrl = 'https://www.instagram.com/lvlivingston/';
   const whatsAppUrl = 'https://chat.whatsapp.com/BoMhhPeOqgL2MLiEFJ9REM';
   const spotifyUrl = 'https://open.spotify.com/user/1180246227?si=WvPRuD3-T5mi4wO697WSRg';
+  const yogaAllianceUrl = 'https://www.yogaalliance.org/TeacherPublicProfile?tid=345820';
   const linkedInUrl = 'https://www.linkedin.com/in/livingstonleah/';
   const gitHubUrl = 'https://github.com/lvlivingston';
   const retreatUrl = 'https://drive.google.com/file/d/1P89qxbloBbgtuMfCZZjLDyy7PFOpwrQw/view'
@@ -107,6 +109,9 @@ export default function HomePage({ setUser }) {
           </a>&nbsp;&nbsp;
           <a href={spotifyUrl} target="_blank" rel="noopener noreferrer">
             <img src={spotifyIcon} alt="Spotify" className="icon" />
+          </a>&nbsp;&nbsp;
+          <a href={yogaAllianceUrl} target="_blank" rel="noopener noreferrer">
+            <img src={yogaAllianceIcon} alt="Yoga Alliance" className="icon" />
           </a>&nbsp;&nbsp;
           <a href={linkedInUrl} target="_blank" rel="noopener noreferrer">
             <img src={linkedInIcon} alt="LinkedIn" className="icon" />
