@@ -94,31 +94,35 @@ export default function HomePage({ setUser }) {
         <h2 className="headline-brown">
         Free Online Classes On YouTube
         </h2>
-        <div className="center">
-          <a href={youTubeUrl} target="_blank" rel="noopener noreferrer">
-            <img src={youTubeIcon} alt="YouTube" className="icon" />
-          </a>&nbsp;&nbsp;
-          <a href={googleUrl} target="_blank" rel="noopener noreferrer">
-            <img src={googleIcon} alt="Google" className="icon" />
-          </a>&nbsp;&nbsp;
-          <a href={instagramUrl} target="_blank" rel="noopener noreferrer">
-            <img src={instagramIcon} alt="Instagram" className="icon" />
-          </a>&nbsp;&nbsp;
-          <a href={whatsAppUrl} target="_blank" rel="noopener noreferrer">
-            <img src={whatsAppIcon} alt="WhatsApp" className="icon" />
-          </a>&nbsp;&nbsp;
-          <a href={spotifyUrl} target="_blank" rel="noopener noreferrer">
-            <img src={spotifyIcon} alt="Spotify" className="icon" />
-          </a>&nbsp;&nbsp;
-          <a href={yogaAllianceUrl} target="_blank" rel="noopener noreferrer">
-            <img src={yogaAllianceIcon} alt="Yoga Alliance" className="icon" />
-          </a>&nbsp;&nbsp;
-          <a href={linkedInUrl} target="_blank" rel="noopener noreferrer">
-            <img src={linkedInIcon} alt="LinkedIn" className="icon" />
-          </a>&nbsp;&nbsp;
-          <a href={gitHubUrl} target="_blank" rel="noopener noreferrer">
-            <img src={gitHubIcon} alt="GitHub" className="icon" />
-          </a>&nbsp;
+        <div className="center icon-container">
+          <div className="icon-row">
+            <a href={youTubeUrl} target="_blank" rel="noopener noreferrer">
+              <img src={youTubeIcon} alt="YouTube" className="icon" />
+            </a>&nbsp;&nbsp;
+            <a href={googleUrl} target="_blank" rel="noopener noreferrer">
+              <img src={googleIcon} alt="Google" className="icon" />
+            </a>&nbsp;&nbsp;
+            <a href={instagramUrl} target="_blank" rel="noopener noreferrer">
+              <img src={instagramIcon} alt="Instagram" className="icon" />
+            </a>&nbsp;&nbsp;
+            <a href={whatsAppUrl} target="_blank" rel="noopener noreferrer">
+              <img src={whatsAppIcon} alt="WhatsApp" className="icon" />
+            </a>&nbsp;&nbsp;
+          </div>
+          <div className="icon-row">
+            <a href={spotifyUrl} target="_blank" rel="noopener noreferrer">
+              <img src={spotifyIcon} alt="Spotify" className="icon" />
+            </a>&nbsp;&nbsp;
+            <a href={yogaAllianceUrl} target="_blank" rel="noopener noreferrer">
+              <img src={yogaAllianceIcon} alt="Yoga Alliance" className="icon" />
+            </a>&nbsp;&nbsp;
+            <a href={linkedInUrl} target="_blank" rel="noopener noreferrer">
+              <img src={linkedInIcon} alt="LinkedIn" className="icon" />
+            </a>&nbsp;&nbsp;
+            <a href={gitHubUrl} target="_blank" rel="noopener noreferrer">
+              <img src={gitHubIcon} alt="GitHub" className="icon" />
+            </a>&nbsp;
+          </div>
         </div>
       </div>
       <div className="padding">
