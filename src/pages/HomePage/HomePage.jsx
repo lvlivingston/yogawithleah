@@ -146,7 +146,7 @@ export default function HomePage({ setUser }) {
       <div className="retreat">
         <div className="retreat-image-container">
           <a href={retreatUrl} target="_blank" rel="noopener noreferrer">
-            <img src={retreatIconDesktop} alt="Retreat" className="retreat-icon" />
+            <img src={retreatIconMobile} alt="Retreat" className="retreat-icon" />
           </a>
         </div>
         <div className="text-container">
