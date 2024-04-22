@@ -8,7 +8,8 @@ import spotifyIcon from '../../images/spotify.png';
 import yogaAllianceIcon from '../../images/yogaalliance.png';
 import linkedInIcon from '../../images/linkedin.png';
 import gitHubIcon from '../../images/github.png';
-import retreatIcon from '../../images/HYP2024.png';
+import retreatIconMobile from '../../images/HYP2024_mobile.png';
+import retreatIconDesktop from '../../images/HYP2024_desktop.png';
 import './HomePage.css';
 
 export default function HomePage({ setUser }) {
@@ -145,7 +146,7 @@ export default function HomePage({ setUser }) {
       <div className="retreat">
         <div className="retreat-image-container">
           <a href={retreatUrl} target="_blank" rel="noopener noreferrer">
-            <img src={retreatIcon} alt="Retreat" className="retreat-icon" />
+            <img src={retreatIconDesktop} alt="Retreat" className="retreat-icon" />
           </a>
         </div>
         <div className="text-container">
