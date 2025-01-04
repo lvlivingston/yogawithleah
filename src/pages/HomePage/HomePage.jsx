@@ -197,7 +197,7 @@ export default function HomePage({ setUser }) {
       <div className="footer">
         <h2 className="footertext-white">+1 (970) 389-6833</h2>
         <h2 className="footertext-white">sendmeyogastuff@gmail.com</h2>
-        <p className="footertext-legal">Copyright © 2024 Yoga with Leah - All Rights Reserved</p>
+        <p className="footertext-legal">Copyright © 2025 Yoga with Leah - All Rights Reserved</p>
       </div>
     </main>
   );
